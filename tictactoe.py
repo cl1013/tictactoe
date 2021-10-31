@@ -1,3 +1,7 @@
+import colorama
+import os
+
+os.system('color')
 
 player = 0
 board = [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
@@ -6,7 +10,7 @@ playerWon = -1
 while playerWon == -1:
   print(f'player {player + 1} to play')
 
-  icons = [' ', 'X', 'O']
+  icons = [f' ', f'{colorama.Fore.RED}X{colorama.Style.RESET_ALL}', f'{colorama.Fore.GREEN}O{colorama.Style.RESET_ALL}']
 
   print(f' 1 2 3')
   print(f'1{icons[board[0][0] + 1]}│{icons[board[0][1] + 1]}│{icons[board[0][2] + 1]}')
