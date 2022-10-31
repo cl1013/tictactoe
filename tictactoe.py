@@ -10,7 +10,7 @@ playerWon = -1
 while playerWon == -1:
   print(f'player {player + 1} to play')
 
-  icons = [f' ', f'{colorama.Fore.RED}X{colorama.Style.RESET_ALL}', f'{colorama.Fore.GREEN}O{colorama.Style.RESET_ALL}']
+  icons = [f' ', f'{colorama.Fore.YELLOW}X{colorama.Style.RESET_ALL}', f'{colorama.Fore.BLUE}O{colorama.Style.RESET_ALL}']
 
   print(f' 1 2 3')
   print(f'1{icons[board[0][0] + 1]}│{icons[board[0][1] + 1]}│{icons[board[0][2] + 1]}')
