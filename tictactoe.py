@@ -6,11 +6,11 @@ os.system('color')
 player = 0
 board = [[-1, -1, -1], [-1, -1, -1], [-1, -1, -1]]
 
-playerWon = -1
-while playerWon == -1:
+winningPlayer = -1
+while winningPlayer == -1:
   print(f'player {player + 1} to play')
 
-  icons = [f' ', f'{colorama.Fore.YELLOW}X{colorama.Style.RESET_ALL}', f'{colorama.Fore.BLUE}O{colorama.Style.RESET_ALL}']
+  icons = [f' ', f'{colorama.Fore.RED}X{colorama.Style.RESET_ALL}', f'{colorama.Fore.GREEN}O{colorama.Style.RESET_ALL}']
 
   print(f' 1 2 3')
   print(f'1{icons[board[0][0] + 1]}│{icons[board[0][1] + 1]}│{icons[board[0][2] + 1]}')
@@ -33,23 +33,23 @@ while playerWon == -1:
   player = (player + 1) % 2
 
   if board[0][0] == board[0][1] and board[0][1] == board[0][2] and board[0][0] != -1:
-    playerWon = board[0][0]
+    winningPlayer = board[0][0]
   if board[1][0] == board[1][1] and board[1][1] == board[1][2] and board[1][0] != -1:
-    playerWon = board[1][0]
+    winningPlayer = board[1][0]
   if board[2][0] == board[2][1] and board[2][1] == board[2][2] and board[2][0] != -1:
-    playerWon = board[2][0]
+    winningPlayer = board[2][0]
   if board[0][0] == board[1][0] and board[1][0] == board[2][0] and board[0][0] != -1:
-    playerWon = board[0][0]
+    winningPlayer = board[0][0]
   if board[0][1] == board[1][1] and board[1][1] == board[2][1] and board[0][1] != -1:
-    playerWon = board[0][1]
+    winningPlayer = board[0][1]
   if board[0][2] == board[1][2] and board[1][2] == board[2][2] and board[0][2] != -1:
-    playerWon = board[0][2]
+    winningPlayer = board[0][2]
   if board[0][0] == board[1][1] and board[1][1] == board[2][2] and board[0][0] != -1:
-    playerWon = board[0][0]
+    winningPlayer = board[0][0]
   if board[2][0] == board[1][1] and board[1][1] == board[0][2] and board[2][0] != -1:
-    playerWon = board[2][0]
+    winningPlayer = board[2][0]
 
-print(f'player {playerWon + 1} has won')
+print(f'player {winningPlayer + 1} has won')
 print(f'')
 print(f'{icons[board[0][0] + 1]}│{icons[board[0][1] + 1]}│{icons[board[0][2] + 1]}')
 print(f'─┼─┼─')
