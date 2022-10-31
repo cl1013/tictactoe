@@ -50,3 +50,9 @@ while playerWon == -1:
     playerWon = board[2][0]
 
 print(f'player {playerWon + 1} has won')
+print(f'')
+print(f'{icons[board[0][0] + 1]}│{icons[board[0][1] + 1]}│{icons[board[0][2] + 1]}')
+print(f'─┼─┼─')
+print(f'{icons[board[1][0] + 1]}│{icons[board[1][1] + 1]}│{icons[board[1][2] + 1]}')
+print(f'─┼─┼─')
+print(f'{icons[board[2][0] + 1]}│{icons[board[2][1] + 1]}│{icons[board[2][2] + 1]}')
